@@ -20,7 +20,8 @@
     </header>
     <div class="container">
         <div id="main" class="content">
-            <ul class="arrivals-list" data-bind="foreach: arrivals">
+            <input id="search" placeholder="Filter..." type="search" name="filter" data-bind="textInput: query, valueUpdate: 'keyup'" autocomplete="off">
+            <ul class="arrivals-list" data-bind="foreach: filterFlights">
                 <li class="item">
                     <span class="title" data-bind="html: title"></span>
                     <span class="status" data-bind="html: status"></span>
@@ -29,8 +30,11 @@
             </ul>
         </div>
     </div>
-    <script src="./js/build/vendor.min.js"></script>
-    <script src="./js/build/script.min.js"></script>
+    <script src="./js/vendor/knockout-3.3.0.js"></script>
+    <!--<script src="./js/build/script.min.js"></script>-->
+    <script src="./js/page.js"></script>
+    <script src="./js/arrivals.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
